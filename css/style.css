@@ -1,0 +1,13 @@
+#wrapper{
+	width: 95%;
+	height: 97vh;
+	border: 1px solid green;
+	padding: 3px;
+	margin: 15px 5px 15px 30px;
+}
+#left-all-stocks{
+	width:33%;
+	height: 95vh;
+	background-color: #e0e0e0;
+	float:left;
+}

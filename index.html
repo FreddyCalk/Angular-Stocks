@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="stockApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular Stocks</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+</head>
+<body ng-controller = "stockController">
+
+	<div id = "wrapper">
+		<div id="left-all-stocks" class="col-xs-4">
+			<form ng-submit = "getStocks()">
+				<div id="get-stock-text">What Stocks would you like to search for? Separate with a comma (e.g. goog, msft, yhoo):
+				</div>
+				<div id="get-stock-input">
+					<input type="text" ng-model="userStocks">
+				</div>
+			</form>
+			<div id="{{stock.Symbol}}" ng-click="loadStock(stock)" ng-repeat="stock in listOfStocks">
+				<div class="company-name">
+					Company: {{stock.Name}}
+				</div>
+				<div class="stock-change {{getChangeClass(stock.Change)}}">
+					%Change: {{stock.Change}}
+				</div>
+				<div class="stock-symbol">
+					Symbol: {{stock.Symbol}}
+				</div>
+			</div>
+		</div>
+		<div id-"right-single-stock">
+			<div id="stock-filter">
+				Filter: <input type="text" ng-model="stockFilter">
+				<!-- Have Angular create one div for each property in this stock -->
+				<div id="" ng-repeat="detail in dataList | filter: stockFilter">
+					<div class="stock-properties">
+						<div class="detail-prop">{{detail.prop}}: {{detail.val}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+</body>
+	<script src = "js/jquery.min.js"></script>
+	<script src = "js/angular.min.js"></script>
+	<script src = "js/angular-routing.min.js"></script>
+	<script src = "js/controller.js"></script>
+	<script src = "bootstrap/js/bootstrap.min.js"></script>
+</html>
