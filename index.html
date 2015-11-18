@@ -17,28 +17,29 @@
 				<div id="get-stock-text">What Stocks would you like to search for? Separate with a comma (e.g. goog, msft, yhoo):
 				</div>
 				<div id="get-stock-input">
-					<input type="text" ng-model="userStocks">
+					<input id="search-bar" type="text" ng-model="userStocks">
 				</div>
 			</form>
-			<div id="{{stock.Symbol}}" ng-click="loadStock(stock)" ng-repeat="stock in listOfStocks">
-				<div class="company-name">
-					Company: {{stock.Name}}
+			<div class="stock-container" id="{{stock.Symbol}}" ng-click="loadStock(stock)" ng-repeat="stock in listOfStocks">
+				<div class="company-name bold">
+					{{stock.Name}}
 				</div>
 				<div class="stock-change {{getChangeClass(stock.Change)}}">
-					%Change: {{stock.Change}}
+					{{stock.Change}}
+					<div class="stock-symbol">
+					{{stock.Symbol}}
+					</div>
 				</div>
-				<div class="stock-symbol">
-					Symbol: {{stock.Symbol}}
-				</div>
+				
 			</div>
 		</div>
-		<div id-"right-single-stock">
+		<div id="middle-single-stock">
 			<div id="stock-filter">
-				Filter: <input type="text" ng-model="stockFilter">
+				<span class="bold green-text">Filter: </span><input type="text" ng-model="stockFilter">
 				<!-- Have Angular create one div for each property in this stock -->
 				<div id="" ng-repeat="detail in dataList | filter: stockFilter">
 					<div class="stock-properties">
-						<div class="detail-prop">{{detail.prop}}: {{detail.val}}</div>
+						<div class="detail-prop"><span class="bold">{{detail.prop}}:</span> {{detail.val}}</div>
 					</div>
 				</div>
 			</div>

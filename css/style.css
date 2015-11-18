@@ -11,3 +11,46 @@
 	background-color: #e0e0e0;
 	float:left;
 }
+#middle-single-stock{
+	width: 33%;
+	height: 95vh;
+	overflow: scroll;
+	text-align: center;
+}
+#get-stock-text, #get-stock-input{
+	text-align: center;
+}
+.active{
+	background-color:white;
+}
+.stock-change{
+
+}
+.green-text{
+	font-size: 24px;
+	color:green;
+	font-weight:bold;
+}
+.bold{
+	font-weight: bold;
+	display: inline;
+	color: black;
+}
+.stock-symbol{
+	float:right;
+	color:blue;
+	font-size:10px;
+}
+.stock-container{
+	margin: 10px;
+	padding: 10px;
+}
+.change-positive{
+	color:green;
+}
+.change-negative{
+	color:red;
+}
+.detail-prop{
+	
+}
