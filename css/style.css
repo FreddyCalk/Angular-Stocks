@@ -1,27 +1,49 @@
 #wrapper{
 	width: 95%;
-	height: 97vh;
-	border: 1px solid green;
-	padding: 3px;
+	height: 98vh;
+	padding: 0px;
 	margin: 15px 5px 15px 30px;
+	border: 5px solid green;
+	border-radius: 10px;
 }
 #left-all-stocks{
-	width:33%;
-	height: 95vh;
+	width:24%;
+	height: 92vh;
 	background-color: #e0e0e0;
 	float:left;
+	margin:1%;
+	border-radius: 10px;
+	overflow: scroll;
+}
+input{
+	border-radius: 5px;
 }
 #middle-single-stock{
-	width: 33%;
-	height: 95vh;
+	width: 45%;
+	height: 92vh;
 	overflow: scroll;
 	text-align: center;
+	background-color: #00ffcc;
+	margin:1%;
+	float:left;
+	border-radius: 10px;
+}
+#right-graphs{
+	width:24%;
+	height: 92vh;
+	background-color: #e0e0e0;
+	margin:1%;
+	float:left;
+	border-radius: 10px;
+
 }
 #get-stock-text, #get-stock-input{
 	text-align: center;
 }
 .active{
 	background-color:white;
+	border: 1px solid black;
+	border-radius: 5px;
 }
 .stock-change{
 
@@ -52,5 +74,27 @@
 	color:red;
 }
 .detail-prop{
-	
+	background-color: #e0e0e0;
+	padding:10px;
+	margin:5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.value{
+	float:right;
+	margin:auto;
+}
+.stock-properties{
+}
+.attribute{
+	text-align: left;
+	float:left;
+}
+h2{
+	text-align: center;
+}
+.twelve-month-image, .three-month-image{
+	margin:2%;
+	height:214px;
 }
