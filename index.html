@@ -14,11 +14,12 @@
 	<div id = "wrapper">
 		<div id="left-all-stocks" class="col-xs-4">
 			<form ng-submit = "getStocks()">
-				<div id="get-stock-text">What stocks would you like to search for? Separate with a comma (e.g. goog, msft, yhoo):
+				<div id="get-stock-text">Search Stocks:
 				</div>
 				<div id="get-stock-input">
 					<input id="search-bar" type="text" ng-model="userStocks">
 				</div>
+				<div id="get-stock-text-info"> Separate with a comma (e.g. goog, msft, yhoo)</div>
 			</form>
 			<div class="stock-container" id="{{stock.Symbol}}" ng-click="loadStock(stock)" ng-repeat="stock in listOfStocks">
 				<div class="company-name bold">
@@ -35,7 +36,7 @@
 		</div>
 		<div id="middle-single-stock">
 			<div id="stock-filter">
-				<span class="bold green-text">Search: </span><input type="text" ng-model="stockFilter">
+				<span class="bold green-text">Filter Selected: </span><input type="text" ng-model="stockFilter">
 				<!-- Have Angular create one div for each property in this stock -->
 				<div id="" ng-repeat="detail in dataList | filter: stockFilter">
 					<div class="stock-properties">
@@ -46,9 +47,9 @@
 		</div>
 		<div id="right-graphs">
 			<h2 class = "twelve-month-title">3Mo / 10Day M.A.</h2>
-				<img class="twelve-month-image" width = "96%" src="{{image1}}">
+				<img class="twelve-month-image" width = "96%" ng-src="{{image1}}">
 			<h2 class = "three-month-title">12Mo / 50Day M.A.</h2>
-				<img class = "three-month-image" width="96%" src = "{{image2}}">
+				<img class = "three-month-image" width="96%" ng-src = "{{image2}}">
 		</div>
 	</div>
 

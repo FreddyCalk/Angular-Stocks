@@ -37,26 +37,44 @@ input{
 	border-radius: 10px;
 
 }
-#get-stock-text, #get-stock-input{
+#get-stock-text{
 	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+	margin-top: 20px;
 }
+#get-stock-text-info{
+	text-align: center;
+	font-size: 20px;
+}
+ #get-stock-input{
+ 	text-align: center;
+ 	font-size:18px;
+ 	width:100%;
+ }
+ #get-stock-input input{
+ 	width:90%;
+ }
 .active{
 	background-color:white;
-	border: 1px solid black;
-	border-radius: 5px;
 }
 .stock-change{
 
 }
 .green-text{
-	font-size: 24px;
-	color:green;
-	font-weight:bold;
+	font-size: 32px;
+	color: black;
+	font-weight: bold;
 }
 .bold{
 	font-weight: bold;
 	display: inline;
-	color: black;
+}
+#stock-filter input{
+	font-size: 24px;
+}
+#stock-filter input, .green-text{
+	margin-top: 30px;
 }
 .stock-symbol{
 	float:right;
@@ -66,6 +84,8 @@ input{
 .stock-container{
 	margin: 10px;
 	padding: 10px;
+	border: 1px solid black;
+	border-radius: 5px;
 }
 .change-positive{
 	color:green;
