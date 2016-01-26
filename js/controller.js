@@ -5,7 +5,6 @@ angular.module('stockApp',[]).controller('stockController',function ($scope, $ht
 		var url = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20("'+encodedTickers+'")%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json';
 		
 		$http.get(url).success(function (stockData){
-
 			if($scope.userStocks.indexOf(',') < 0){
 				listOfStocks = [stockData.query.results.quote];
 			}else{
@@ -19,12 +18,13 @@ angular.module('stockApp',[]).controller('stockController',function ($scope, $ht
 	}
 	$scope.loadStock = function (stockData){
 		$scope.dataList = [];
-
 		for(name in stockData){
-			$scope.dataList.push({
-				prop: name,
-				val: stockData[name]
-			})
+			if(stockData[name] != null){
+				$scope.dataList.push({
+					prop: name,
+					val: stockData[name]
+				})
+			}
 		}
 		getChart(stockData);
 		$('.stock-container').removeClass('active');
